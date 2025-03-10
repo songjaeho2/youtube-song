@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const Header = () => {
-return (
-    <header id='header' role='banner'>
-        Header
+import Logo from '../header/Logo';
+import Menu from '../header/Menu';
+import Sns from '../header/Sns';
+
+const Header = () => {    
+    return (
+        <header id='header' role='banner' >
+            <Logo />
+            <Menu />
+            <Sns />
         </header>
-)
+    )
 }
 
 export default Header
+
+

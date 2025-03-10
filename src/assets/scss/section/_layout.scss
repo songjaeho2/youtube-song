@@ -4,9 +4,9 @@
     top: 0;
     width: 260px;
     height: 100%;
+    overflow-y: auto;
     z-index: 10000;
     background-color: #000;
-
 }
 #main {
     max-width: 2000px;
@@ -16,8 +16,7 @@
     background-color: #111;
 }
 #footer {
-    text-align: conter;
+    text-align: center;
     background-color: #333;
     padding: 20px 20px 20px 260px;
-    
 }
