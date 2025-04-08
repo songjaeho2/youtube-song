@@ -1,0 +1,102 @@
+
+    .video__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 32%);
+    justify-content: space-around;
+    
+
+
+    @media (max-width: 1400px) {
+        grid-template-columns: repeat(3, 32%);
+        gap: 15px;
+    }
+    @media (max-width: 1200px) {
+        grid-template-columns: repeat(2, 49%);
+        gap: 10px;
+    }
+    @media (max-width: 1000px) {
+        grid-template-columns: repeat(1, 100%);
+    }
+
+    .video {
+        margin-bottom: 20px;
+        position: relative; /* 제목 위치를 위해 추가 */
+    }
+
+    .video__title {
+        position: absolute;
+        bottom: 3px;  /* 비디오 아래쪽에 제목 배치 */
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.6); /* 반투명 배경 */
+        color: white;
+        font-size: 16.5px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        text-align: center;
+    }
+}
+.video__inner.webd {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  
+    &.isLoaded {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+
+  
+#videoViewPage {
+    padding: 0;
+
+    @media (max-width: 800px) {
+        margin-top: 80px;
+    }
+}
+
+.video__view {
+    .video__play {
+        width: 100%;
+        padding-bottom: 56.2%;
+        position: relative;
+    }
+
+    .video__info {
+        padding: 40px;
+
+        .video__channel {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            background-color: #111;
+            padding: 10px 30px;
+            border-radius: 40px;
+
+            .id {
+                font-weight: 800;
+            }
+
+            .count {
+                span {
+                    border-radius: 40px;
+                    font-size: 14px;
+                    margin-left: 10px;
+
+                    svg {
+                        width: 20px;
+                        height: 20px;
+                        vertical-align: -5px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+        .video__desc {
+            white-space: pre-line;
+        }
+    }
+}

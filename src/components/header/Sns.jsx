@@ -1,24 +1,18 @@
-import { snsLink } from '../../data/header'
+import React from 'react'
+
 
 const Sns = () => {
-    return (
-        <div className='header__sns'>
-            <ul>
-                {snsLink.map((sns, key) => (
-                    <li key={key}>
-                        <a 
-                            href={sns.url} 
-                            target='_black' 
-                            rel='noopener noreferrer' 
-                            aria-label={sns.title}
-                        >
-                            <span>{sns.icon}</span>
-                        </a>
-                    </li>
-                ))}
-            </ul>
-        </div>
-    )
+  return (
+    <div className="header__sns">
+      <a 
+        href="https://www.instagram.com/jhooooooooooooooo" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="sns__button"
+      >
+      </a>
+    </div>
+  )
 }
 
 export default Sns
