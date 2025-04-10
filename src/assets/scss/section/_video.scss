@@ -25,6 +25,7 @@
 
     .video__title {
         position: absolute;
+        white-space: pre-line;
         bottom: 3px;  /* 비디오 아래쪽에 제목 배치 */
         left: 50%;
         transform: translateX(-50%);

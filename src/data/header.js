@@ -14,12 +14,22 @@ export const headerMenus = [
         src: "/"
     },
     {
+        title: "경력사항",
+        icon: <CiMoneyBill />,
+        src: "/crr"
+    },
+    {
         title: "광고영상",
         icon: <CiMoneyBill />,
         src: "/webd"
     },
     {
         title: "뮤직비디오",
+        icon: <CiBoxes />,
+        src: "/mv"
+    },
+    {
+        title: "연기영상",
         icon: <CiBoxes />,
         src: "/mv"
     },

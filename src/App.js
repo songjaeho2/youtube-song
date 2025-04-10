@@ -6,7 +6,7 @@ const Home = lazy(() => import('./pages/Home'));
 const Webd = lazy(() => import('./pages/Webd'));
 const Mv = lazy(() => import('./pages/Mv'));
 const Video = lazy(() => import('./pages/Video'));
-const Search = lazy(() => import('./pages/Search'));
+const Crr = lazy(() => import('./pages/Crr'));
 const Not = lazy(() => import('./pages/Not'));
 const Today = lazy(() => import('./pages/Today'));
 
@@ -23,7 +23,7 @@ const App = () => {
                     <Route path="/webd" element={<Webd />} />
                     <Route path="/mv" element={<Mv />} />
                     <Route path='/video/:videoId' element={<Video />} />
-                    <Route path='/search/:searchId' element={<Search />} />
+                    <Route path="crr" element={<Crr />} />
                     <Route path="*" element={<Not />} />
                 </Routes>
             </Suspense>
