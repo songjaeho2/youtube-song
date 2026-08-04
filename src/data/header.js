@@ -31,7 +31,7 @@ export const headerMenus = [
     {
         title: "연기영상",
         icon: <CiBoxes />,
-        src: "/mv"
+        src: "/acting"
     },
 
 

@@ -10,7 +10,14 @@ const VideoCards = ({ videos }) => {
                     <Link to={`/video/${video.videoId}`}>
                         <img src={video.img} alt={video.title} />
                     </Link>
-                    <span className='video__title'>{video.title}</span>
+                    <span className='video__title'>
+    {video.title.split('\n').map((line, i) => (
+        <React.Fragment key={i}>
+        {line}
+        <br />
+        </React.Fragment>
+    ))}
+    </span>
                 </div>
                 </div>
             ))}

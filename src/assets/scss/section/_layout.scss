@@ -13,7 +13,13 @@
     min-height: 100vh;
     margin: 0 auto;
     padding-left: 260px;
-}
+  
+    @media (max-width: 768px) {
+      padding-left: 0;
+      padding-top: 70px; // <- 여기! 상단 마진 추가
+    }
+  }
+
 #footer {
     text-align: center;
     background-color: var(--black100);

@@ -1,4 +1,28 @@
-@font-face {
+html {
+    font-size: var(--font-base);
+  
+    @media (max-width: 800px) {
+      font-size: var(--font-base-m);
+    }
+  }
+  
+  body {
+    font-family: var(--mainfont-nanum), var(--mainfont-nexon), sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 400;
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+  
+    background-color: var(--black);
+    color: var(--white);
+  }
+  
+  @font-face {
     font-family: "nexonLv1";
     font-weight: 100;
     font-style: normal;

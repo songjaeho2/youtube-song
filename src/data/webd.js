@@ -1,29 +1,72 @@
-import 크몽00 from "../assets/img/webd/크몽00.png";
+import 크몽00 from "../assets/img/webd/크몽00.jpg";
 import 한화금융01 from "../assets/img/webd/한화금융01.jpg";
-import 카스제로제로03 from "../assets/img/webd/카스제로제로03.png";
-import 플렉스04 from "../assets/img/webd/플렉스04.png";
+import 카스제로제로 from "../assets/img/webd/카스제로제로.jpg";
+import 플렉스04 from "../assets/img/webd/플렉스04.jpg";
 import 코드스테이츠 from "../assets/img/webd/코드스테이츠.jpg";
-import 우루오스 from "../assets/img/webd/우루오스.png";
-import 새우깡블랙 from "../assets/img/webd/새우깡블랙.png";
-import 써브웨이 from "../assets/img/webd/써브웨이.png";
-import SK하이닉스 from "../assets/img/webd/SK하이닉스.png";
-import 코웨이비렉스 from "../assets/img/webd/코웨이비렉스.png";
-import 컴투스프로야구 from "../assets/img/webd/컴투스프로야구.png";
+import 우루오스 from "../assets/img/webd/우루오스.jpg";
+import 새우깡블랙 from "../assets/img/webd/새우깡블랙.jpg";
+import 써브웨이 from "../assets/img/webd/써브웨이.jpg";
+import SK하이닉스 from "../assets/img/webd/SK하이닉스.jpg";
+import 코웨이비렉스 from "../assets/img/webd/코웨이비렉스.jpg";
+import 컴투스프로야구 from "../assets/img/webd/컴투스프로야구.jpg";
 import 콜마그룹 from "../assets/img/webd/콜마그룹.jpg";
 import 본촌치킨 from "../assets/img/webd/본촌치킨.jpg";
-import 폭스바겐 from "../assets/img/webd/폭스바겐.png";
-import 삼성생명 from "../assets/img/webd/삼성생명.png";
-import 마왕족발 from "../assets/img/webd/마왕족발.png";
-import 혼마골프 from "../assets/img/webd/혼마골프.png";
-import 하이마트 from "../assets/img/webd/하이마트.png";
+import 폭스바겐 from "../assets/img/webd/폭스바겐.jpg";
+import 삼성생명 from "../assets/img/webd/삼성생명.jpg";
+import 마왕족발 from "../assets/img/webd/마왕족발.jpg";
+import 혼마골프 from "../assets/img/webd/혼마골프.jpg";
+import 하이마트 from "../assets/img/webd/하이마트.jpg";
 import LS그룹 from "../assets/img/webd/LS그룹.jpg";
-import 꽃집청년들 from "../assets/img/webd/꽃집청년들.png";
-import 용각산쿨 from "../assets/img/webd/용각산쿨.png";
+import 꽃집청년들 from "../assets/img/webd/꽃집청년들.jpg";
+import 용각산쿨 from "../assets/img/webd/용각산쿨.jpg";
+import LG홍콩 from "../assets/img/webd/LG홍콩.jpg";
+import 고래사어묵 from "../assets/img/webd/고래사어묵.jpg";
+import 카스제로 from "../assets/img/webd/카스제로.jpg";
+import 동행복권 from "../assets/img/webd/동행복권.jpg";
+import 자담치킨 from "../assets/img/webd/자담치킨.jpg";
+
 
 
 
 export const webdText = [
-    {
+
+{
+        title: "자담치킨",
+        img: 자담치킨,
+        author: "songjaeho",
+        videoId: "FNUg2JZdxGA",
+        date: "2026.05.15",
+
+    },{
+        title: "동행복권",
+        img: 동행복권,
+        author: "songjaeho",
+        videoId: "9N6WoIoCoRc",
+        date: "2026.01.28",
+
+    },{
+        title: "카스제로",
+        img: 카스제로,
+        author: "songjaeho",
+        videoId: "KzNbi_hz7lY",
+        date: "2025.07.21",
+
+    },{
+        title: "LG홍콩",
+        img: LG홍콩,
+        author: "songjaeho",
+        videoId: "yKWhvm9O8pU",
+        date: "2025.05.02",
+
+    },{
+        videoId: "my-local-video",
+        title: "고래사어묵",
+        img: 고래사어묵,
+        author: "songjaeho",
+        src: "/videos/고래사어묵.mp4",
+        isLocal: true
+
+    },{
         title: "크몽",
         img: 크몽00,
         author: "songjaeho",
@@ -39,7 +82,7 @@ export const webdText = [
 
     }, {
         title: "카스 0.0",
-        img: 카스제로제로03,
+        img: 카스제로제로,
         author: "songjaeho",
         videoId: "b0MuY7QUdSs",
         date: "2024.03.18",
@@ -128,7 +171,7 @@ export const webdText = [
         date: "2024.08.24",
         
     }, {
-        videoId: "my-local-video",
+        videoId: "my-local-video2",
         title: "본촌치킨",
         img: 본촌치킨,
         author: "songjaeho",

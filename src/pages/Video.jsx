@@ -1,10 +1,11 @@
     import React, { useState, useEffect } from 'react';
     import { Link, useParams } from 'react-router-dom';
     import { fetchFromAPI } from '../utils/api';
-    import { webdText } from '../data/webd'; // 로컬 영상 데이터
+    import { webdText } from '../data/webd';
     import Main from '../components/section/Main';
     import ReactPlayer from 'react-player';
     import { CiChat1, CiStar, CiRead } from 'react-icons/ci';
+    import { AiOutlineFullscreen } from 'react-icons/ai';
 
     const Video = () => {
     const { videoId } = useParams();
@@ -25,37 +26,74 @@
         window.scrollTo(0, 0);
     }, [videoId]);
 
+    // 전체화면 함수
+    const handleFullScreen = () => {
+        const videoElement = document.getElementById("localVideoPlayer");
+        if (videoElement.requestFullscreen) {
+        videoElement.requestFullscreen();
+        } else if (videoElement.webkitRequestFullscreen) {
+        videoElement.webkitRequestFullscreen();
+        } else if (videoElement.msRequestFullscreen) {
+        videoElement.msRequestFullscreen();
+        }
+    };
+
     return (
         <Main title="" description="">
         <section id='videoViewPage'>
             <div className='video__view'>
-            <div className='video__play'>
+            <div className='video__play' style={{ position: 'relative' }}>
                 {isLocal ? (
-                <video
+                <>
+                    <video
+                    id="localVideoPlayer"
                     src={localVideo.src}
                     controls
                     autoPlay
                     style={{ width: '100%', borderRadius: '12px' }}
-                />
-            ) : (
-                    videoDetail && (
-                <ReactPlayer
-                playing={true}
-                url={`https://www.youtube.com/watch?v=${videoId}`}
-                width='100%'
-                height='100%'
-                style={{ position: 'absolute', top: 0, left: 0 }}
-                config={{
-                    youtube: {
-                    playerVars: {
-                        cc_load_policy: 0,
-                        cc_lang_pref: 'xx',
-                        hl: 'en'
-                    }
-                    }
-                }}
-                />
-                    )
+                    />
+                    <button
+                    onClick={handleFullScreen}
+                    style={{
+                        position: 'absolute',
+                        top: '10px',
+                        right: '10px',
+                        background: 'rgba(0,0,0,0.6)',
+                        border: 'none',
+                        color: 'white',
+                        padding: '8px',
+                        borderRadius: '50%',
+                        cursor: 'pointer',
+                        zIndex: 10
+                    }}
+                    title="전체화면"
+                    >
+                    <AiOutlineFullscreen size={20} />
+                    </button>
+                </>
+                ) : (
+                videoDetail && (
+    <ReactPlayer
+    playing={true}
+    url={`https://www.youtube.com/watch?v=${videoId}`}
+    width="100%"
+    height="100%"
+    style={{ position: 'absolute', top: 0, left: 0 }}
+    config={{
+        youtube: {
+        playerVars: {
+            autoplay: 1,
+            rel: 0,                 // 관련 영상 제거 (가능한 한)
+            modestbranding: 1,      // YouTube 로고 최소화
+            controls: 1,            // 플레이어 컨트롤은 표시
+            showinfo: 0,            // 제목 등 최소화 (일부 브라우저만 적용)
+            fs: 1                   // 전체화면 허용
+        }
+        }
+    }}
+    controls
+    />
+                )
                 )}
             </div>
 
@@ -90,3 +128,7 @@
     };
 
     export default Video;
+
+
+
+

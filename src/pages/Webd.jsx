@@ -29,7 +29,6 @@ const Webd = () => {
             description="">
                 
             <section id='webd' className={webdClass}>
-                <h2>광고영상</h2>
                 <div className={`video__inner webd ${loading ? '' : 'isLoaded'}`}>
                     <VideoCard videos={webdText} />
 

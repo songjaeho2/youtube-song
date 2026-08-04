@@ -1,11 +1,11 @@
-import 크몽00 from "../assets/img/webd/크몽00.png";
+import 자담치킨 from "../assets/img/webd/자담치킨.jpg";
 
 export const todayText = [
   {
-    title: "Kmong",
-    date: "2025.03.04",
-    img: 크몽00,
+    title: "자담치킨",
+    date: "2026.05.15",
+    img: 자담치킨,
     author: "최근 광고입니다 :)",
-    page: "/video/JcTHLyPrG_U"
+    page: "/video/FNUg2JZdxGA",
   }
 ];

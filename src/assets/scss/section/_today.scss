@@ -84,7 +84,7 @@
 
     
     /* 📱 태블릿 이하 대응 */
-    @media (max-width: 1000px) {
+    @media (max-width: 700px) {
         .today__inner {
         flex-direction: column;
         padding: 0.8rem;
@@ -125,7 +125,7 @@
         }
     
         .today__thumb {
-        max-width: 100%;
+        max-width: 500%;
         }
     
         .today__text {

@@ -1,12 +1,12 @@
 import 나방 from "../assets/img/site/나방.jpg";
 import 김한결 from "../assets/img/site/김한결.jpg";
-import 송가인 from "../assets/img/site/송가인.png";
-import 임한별9월24일 from "../assets/img/site/임한별9월24일.png";
+import 송가인 from "../assets/img/site/송가인.jpg";
+import 임한별9월24일 from "../assets/img/site/임한별9월24일.jpg";
 import 정동하 from "../assets/img/site/정동하.jpg";
 import 이우결혼식장에서 from "../assets/img/site/이우결혼식장에서.jpg";
 import 김도희 from "../assets/img/site/김도희.jpg";
 import 도도 from "../assets/img/site/도도.jpg";
-import 박제업 from "../assets/img/site/박제업.png";
+import 박제업 from "../assets/img/site/박제업.jpg";
 
 
 export const mvText = [
@@ -40,7 +40,7 @@ export const mvText = [
 
 
     }, {
-        title: "정동하 - 추억은 만남보다 이별에 남아",
+        title: "정동하\n추억은 만남보다 이별에 남아",
         img: 정동하,
         author: "songjaeho",
         videoId: "khGHeUaJRjw",
@@ -54,7 +54,7 @@ export const mvText = [
         date: "2023.05.10",
 
     }, {
-        title: "김도희 - 끝이 선명했던 \n우리였기에",
+        title: "김도희 \n끝이 선명했던 우리였기에",
         img: 김도희,
         author: "songjaeho",
         videoId: "yV0T9OtUvnk",
@@ -68,7 +68,7 @@ export const mvText = [
         date: "2021.04.10",
 
     }, {
-        title: "박제업,유성은  \nDay by Day",
+        title: "박제업,유성은 - Day by Day",
         img: 박제업,
         author: "song jae ho",
         videoId: "q4ul2kW4_Sc",
