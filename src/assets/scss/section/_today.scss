@@ -1,0 +1,153 @@
+.today__inner {
+    display: flex;
+    align-items: stretch; // 이미지, 텍스트 높이 맞춤
+    margin: 0.3rem;
+    background-color: var(--black100);
+    padding: 0.8rem;
+    border-radius: 8px;
+}
+    
+    .today__thumb {
+        width: 40%;
+        max-width: 400px;
+        min-width: 280px;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+    
+        img {
+            width: 100%;
+            height: 100%;          /* height: auto → 100% */
+            object-fit: cover;     /* 가득 채우기 + 비율 유지 */
+            display: block;
+            border-radius: 10px;
+        }
+    }
+    
+    .today__text {
+        width: 60%;
+        max-width: 400px;
+        margin-left: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+        // 이 안에 들어가는 텍스트들도 줄어들 수 있도록
+        word-break: keep-all;
+        flex-shrink: 1; // 줄어들 수 있도록!
+
+        .today {
+            background-color: #f00;
+            font-size: 0.75rem;
+            padding: 3px 15px;
+            border-radius: 999px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: inline-block;
+            white-space: nowrap;
+            line-height: 1;
+            width: auto;              // ✅ 필요 시 명시
+            max-width: fit-content;   // ✅ 길이 딱 맞게
+        }
+
+    
+        .info {
+            margin-top: 3rem; // 너무 멀면 줄이기
+        }
+    }
+    
+    .title {
+        font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem); // 뷰포트 너비 따라 유연하게
+        line-height: 1.2;
+        word-break: keep-all;
+    }
+    
+        .desc {
+        font-size: 0.9rem;
+        }
+    
+        .info {
+            font-size: clamp(0.8rem, 1vw, 0.9rem);
+            flex-wrap: wrap; // 좁아지면 아래로 줄바꿈 되게
+            margin-top: 2rem;
+        
+            .author {
+                font-size: clamp(0.9rem, 1vw, 1.1rem);
+            }
+        
+            .date {
+                margin-left: 0.6rem;
+                font-size: clamp(0.8rem, 0.9vw, 0.95rem);
+                color: var(--white200);
+            }
+        }
+
+
+    
+    /* 📱 태블릿 이하 대응 */
+    @media (max-width: 700px) {
+        .today__inner {
+        flex-direction: column;
+        padding: 0.8rem;
+        }
+    
+        .today__thumb,
+        .today__text {
+        width: 100%;
+        max-width: 100%;
+        }
+    
+        .today__thumb {
+        max-width: 100%;
+        }
+    
+        .today__text {
+        padding: 0.8rem;
+    
+        .title {
+            font-size: 1.5rem;
+        }
+    
+        .desc {
+            font-size: 0.9rem;
+        }
+    
+        .info {
+            font-size: 0.9rem;
+        }
+        }
+    }
+    
+    /* 📱 모바일 대응 */
+    @media (max-width: 600px) {
+        .today__inner {
+        padding: 0.4rem;
+        margin: 0.2rem;
+        }
+    
+        .today__thumb {
+        max-width: 500%;
+        }
+    
+        .today__text {
+        padding: 0.6rem;
+    
+        .title {
+            font-size: 1.5rem;
+        }
+    
+        .desc {
+            font-size: 0.9rem;
+        }
+    
+        .info {
+            font-size: 0.9rem;
+        }
+        }
+    }
+    
+
+
+
+
+
+

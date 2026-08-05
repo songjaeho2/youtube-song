@@ -1,0 +1,293 @@
+.career-section {
+    margin-top: 5rem;
+    padding: 6rem 1rem;
+    color: #ececec;
+    font-family: 'Pretendard', sans-serif;
+
+    .career-layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    }
+
+    .profile-image-wrapper {
+        flex-shrink: 0;
+        img {
+            width: 300px;
+            height: 400px;
+            border-radius: 5%;
+            object-fit: cover;
+        }
+    }
+
+    .career-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    }
+
+
+    .career-column {
+        min-width: 130px;
+        h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 0.8rem;
+        text-align: left;
+        }
+
+        .divider {
+        width: 100%;
+        height: 1px;
+        background-color: #8b8888;
+        margin-bottom: 1.8rem;
+        }
+
+        ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            position: relative;
+            padding-left: 0.8rem;
+            margin: 0.6rem 0;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            font-variant-numeric: tabular-nums;
+
+            /* 가짜 불릿 */
+            &::before {
+            content: "·";
+            position: absolute;
+            left: 0;
+            }
+        }
+        }
+    }
+    }
+
+@media (max-width: 1076px) {
+    
+    .career-section {
+        margin-top: 2rem; // 원래 10rem이었으니 줄여줌
+        padding-top: 9rem;
+        }
+        .career-section .career-column h2 {
+            font-size: 1.5rem;
+        }
+        
+        .career-section .career-column ul li {
+            font-size: 1.1rem;
+        }
+        }
+
+
+@media (max-width: 800px) {
+    .career-layout {
+        margin-top: 3rem; // 원래 10rem이었으니 줄여줌
+        padding-top: 2rem;
+        flex-direction: column; // 세로 정렬
+        align-items: center;    // 가운데 정렬
+        gap: 5rem !important;              // 세로 간격 조정
+    }
+    .career-section {
+        margin-top:  2rem; 
+        padding-top: 2rem;
+    }
+    .profile-image-wrapper {
+        margin-top: 2rem;
+        margin-bottom: -1rem;
+    }
+    .career-container {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+}
+
+// 768 이하 전체 마진
+@media (max-width: 768px) {
+    .career-section {
+        margin-top: -3.8rem; 
+        margin-bottom: 2rem; 
+        padding-top: 2rem;
+        .career-layout {
+            gap: 5rem !important; // 강제로 우선순위를 지정
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .career-layout {
+        gap: 2.3rem !important; // 강제로 우선순위를 지정
+    }
+
+    .career-container {
+        gap: 1rem !important; // 강제로 우선순위를 지정
+    }
+    .profile-image-wrapper {
+        display: flex;
+        justify-content: center; // 가로 중앙 정렬
+}
+}
+
+        @media (max-width: 440px) {
+            .career-section {
+            padding: 2rem 1rem; // 전체 패딩 줄이기
+        
+            .career-layout {
+                gap: 1.5rem; // 간격 줄이기
+            }
+        
+            .career-container {
+                flex-direction: row; // 세로로 쌓이지 않게 하기
+                gap: 1.5rem;
+                align-items: center;
+            }
+        
+            .career-column {
+                min-width: auto;
+                max-width: 100%;
+                text-align: left;
+        
+                h2 {
+                font-size: 1.2rem; // 제목 크기 줄이기
+                white-space: nowrap; // 텍스트가 세로로 떨어지지 않도록 처리
+                }
+        
+                ul {
+                li {
+                    font-size: 1rem; // 항목 텍스트 크기 줄이기
+                    margin: 0.7rem; // 항목 간격 줄이기
+                    line-height: 1.5;
+                    padding: 1;
+                    text-indent: 0;
+                    white-space: nowrap; // 텍스트가 세로로 떨어지지 않도록 처리
+                }
+                }
+            }
+            }
+        
+            .download-section {
+            padding: 1rem; // 안쪽 여백 줄이기
+            margin: 1.5rem 0.5rem; // 바깥 여백 좌우 조정
+            border-radius: 6px;
+            text-align: center;
+        
+            h2 {
+                font-size: 1.1rem; // 다운로드 섹션 제목 크기 줄이기
+                margin-bottom: 1rem;
+                white-space: nowrap; // 텍스트가 세로로 떨어지지 않도록 처리
+            }
+        
+            ul {
+                display: flex;
+                flex-direction: row; // 버튼을 가로로 정렬
+                align-items: center;
+                gap: 0.8rem;
+                justify-content: center;
+            }
+        
+            li {
+                margin-right: 0; // 오른쪽 여백 제거
+            }
+        
+            a {
+                font-size: 0.95rem; // 버튼 텍스트 크기 줄이기
+                padding: 0.7rem 1.2rem;
+                width: 100%; // 전체 너비 사용
+                max-width: 260px; // 최대 폭 제한
+                justify-content: center;
+                white-space: nowrap; // 텍스트 줄바꿈 방지
+            }
+            }
+        }
+
+
+.download-section {
+    padding: 1.6rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+    text-align: center;
+
+    h2 {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+        color: #ffffff;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        display: inline-block;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+
+        a {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #fff;
+            background-color: #3b3e42;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #3b3e42;
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+    @media (max-width: 440px) {
+        .download-section {
+        padding: 1rem;
+        margin: 1.5rem 0.5rem;
+        border-radius: 6px;
+    
+        h2 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+    
+        ul {
+            display: flex;
+            flex-direction: column; // 버튼 세로 정렬
+            align-items: center;
+            gap: 0.8rem;
+        }
+    
+        li {
+            display: block;
+            margin: 0;
+            width: 100%;
+            max-width: 260px;
+        }
+    
+        a {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding: 0.7rem 1.2rem;
+            font-size: 0.95rem;
+            white-space: nowrap; // 텍스트 줄바꿈 방지
+            overflow: hidden;
+            text-overflow: ellipsis; // 길면 말줄임표 처리
+        }
+        }
+    }

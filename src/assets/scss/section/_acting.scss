@@ -1,0 +1,24 @@
+    .under-construction {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 100px 20px;
+        text-align: center;
+    
+        .container {
+            background-color: #222;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    
+            h1 {
+                font-size: 2.2rem;
+                margin-bottom: 20px;
+            }
+    
+            p {
+                font-size: 1.1rem;
+                color: #ccc;
+            }
+        }
+    }
